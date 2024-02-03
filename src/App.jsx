@@ -6,15 +6,9 @@ import ChatRoom from './component/ChatRoom/ChatRoom'
 
 
 function App() {
-  // const [count, setCount] = useState(0)
-
-  // useEffect(() => {
-
-
-  // })
-
+  
   return (
-    <div className='max-sm:h-[100vh] max-sm:flex max-sm:items-center'>
+    <div className=''>
       <ChatRoom />
     </div>
   )

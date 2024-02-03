@@ -1,21 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 /* a {
   font-weight: 500;
@@ -68,10 +64,10 @@ button{
   flex-direction: row;
 }
 .chat-box{
-  box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12);
+  /* box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12); */
   margin:40px 50px;
   height: 600px;
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   flex-direction: row;
 }
@@ -82,12 +78,14 @@ button{
 
 .chat-content{
   width:80%;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 .chat-messages{
-  height: 80%;
-  border: 1px solid #000;
+ 
+  height: 80%; /* Puedes ajustar la altura máxima según tus necesidades */
+  max-width: 100%; /* Puedes ajustar el ancho máximo según tus necesidades */
+  overflow: auto;
 }
 
 .send-message{
@@ -117,7 +115,7 @@ ul {
   border:#000;
   cursor: pointer;
   margin: 5px 2px;
-  box-shadow: 0 8px 8px -4px lightblue;
+  /* box-shadow: 0 8px 8px -4px lightblue; */
 }
 .member.active{
   background: blueviolet;
@@ -143,12 +141,28 @@ ul {
   width: auto;
   display: flex;
   flex-direction: row;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
   margin: 5px 10px;
 }
 .message-data{
-  padding:5px;
+  
+  overflow:hidden;
+
+}
+
+.message-data .p{
+
 }
 .message.self{
   justify-content: end;
+}
+
+.message-c{
+  height: 32px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
 }
