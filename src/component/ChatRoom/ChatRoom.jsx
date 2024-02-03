@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {over} from 'stompjs';
 import SockJS from 'sockjs-client/dist/sockjs.min.js';
 import { VscSend } from "react-icons/vsc";
-
+// https://backend-chat-production-b553.up.railway.app//ws
+// 'http://localhost:8080/ws'
 var stompClient =null;
 
 const ChatRoom = () => {
@@ -21,7 +22,7 @@ const ChatRoom = () => {
     }, [userData]);
 
     const connect =()=>{
-        let Sock = new SockJS('http://localhost:8080/ws');
+        let Sock = new SockJS('https://backend-chat-production-b553.up.railway.app//ws');
         stompClient = over(Sock);
         stompClient.connect({},onConnected, onError);
     }
