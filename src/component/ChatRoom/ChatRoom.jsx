@@ -3,7 +3,7 @@ import { over } from 'stompjs';
 import SockJS from 'sockjs-client/dist/sockjs.min.js';
 import { VscSend } from "react-icons/vsc";
 import { FaArrowLeft } from "react-icons/fa";
-// https://backend-chat-production-b553.up.railway.app//ws
+// https://backend-chat-production-b553.up.railway.app/ws
 // 'http://localhost:8080/ws'
 var stompClient = null;
 
@@ -24,7 +24,7 @@ const ChatRoom = () => {
     }, [userData]);
 
     const connect = () => {
-        let Sock = new SockJS('https://backend-chat-production-b553.up.railway.app//ws');
+        let Sock = new SockJS('https://backend-chat-production-b553.up.railway.app/ws');
         stompClient = over(Sock);
         stompClient.connect({}, onConnected, onError);
     }
