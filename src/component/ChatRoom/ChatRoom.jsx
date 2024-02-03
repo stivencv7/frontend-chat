@@ -22,7 +22,7 @@ const ChatRoom = () => {
     }, [userData]);
 
     const connect =()=>{
-        let Sock = new SockJS('https://backend-chat-production-b553.up.railway.app//ws');
+        let Sock = new SockJS('https://backend-chat-production-b553.up.railway.app/ws');
         stompClient = over(Sock);
         stompClient.connect({},onConnected, onError);
     }
